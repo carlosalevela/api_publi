@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "627347264436",
+    "project_id": "apipubli",
+    "storage_bucket": "apipubli.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627347264436:android:b59d543d313841f51258e1",
+        "android_client_info": {
+          "package_name": "com.example.publitap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAN2dcK59pn9PSrsuDVZn4lJZTmf-p1DeU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

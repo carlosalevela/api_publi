@@ -2,9 +2,16 @@ import 'package:flutter/material.dart';
 import 'screens/login_screen.dart'; // Pantalla de Login
 import 'screens/register_screen.dart'; // Pantalla de Registro
 import 'screens/home_screen.dart'; // Pantalla de Inicio
-import 'screens/almacen_detail_screen.dart'; // Pantalla de Detalles de Almacén
+import 'screens/Almacen_detail_screen.dart'; // Pantalla de Detalles de Almacén
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform, 
+  );
   runApp(MyApp());
 }
 
@@ -21,12 +28,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/login', // La pantalla inicial será LoginScreen
       routes: {
         '/login': (context) => LoginScreen(), // Ruta para la pantalla de Login
-        '/register': (context) =>
-            RegisterScreen(), // Ruta para la pantalla de Registro
-        '/home': (context) =>
-            HomeScreen(), // Ruta para la pantalla Home (principal)
-        '/almacen_detail': (context) => AlmacenDetailScreen(
-            nombre: '', descripcion: ''), // Ruta para detalles del almacén
+        '/register': (context) => RegisterScreen(), // Ruta para la pantalla de Registro
+        '/home': (context) => HomeScreen(), // Ruta para la pantalla Home (principal) 
       },
     );
   }
